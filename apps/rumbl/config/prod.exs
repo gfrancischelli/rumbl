@@ -16,7 +16,7 @@ config :rumbl, Rumbl.Endpoint,
   url: [host: "localhost", port: {:system, "PORT"}],
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
-  root: ".",
+  root: "priv/static",
   version: Application.spec(:myapp, :vsn)
 
 
