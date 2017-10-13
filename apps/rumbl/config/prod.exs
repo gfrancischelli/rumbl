@@ -13,9 +13,10 @@ use Mix.Config
 # which you typically run after static files are built.
 config :rumbl, Rumbl.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [host: "localhost", port: {:system, "PORT"}],
+  url: [host: "127.0.0.1", port: {:system, "PORT"}],
   cache_static_manifest: "priv/static/manifest.json",
   server: true,
+  check_origin: ["http://127.0.0.1:8080, http://localhost:8080"],
   root: "priv/static",
   version: Application.spec(:myapp, :vsn)
 
