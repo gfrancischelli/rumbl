@@ -1,1 +1,54 @@
 /* This file is for your main application css. */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.card-container > .card {
+  width: 22%;
+  margin-bottom: 2em;
+  margin-left: 4%
+}
+
+@media (min-width: 980px) {
+  .card-container > .card:nth-child(4n-3) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 730px) {
+  .card-container > .card {
+    width: 30%;
+    margin-bottom: 2em;
+    margin-left: 4.5%
+  }
+
+  .card-container > .card:nth-child(3n-2) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 730px) and (min-width: 480px) {
+  .card-container > .card {
+    width: 45%;
+    margin-bottom: 2em;
+    margin-left: 5%
+  }
+
+  .card-container > .card:nth-child(2n-1) {
+    margin-left: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .card-container > .card {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}
+
+.text-danger > .help-block {
+  color: #dc3545!important;
+}
